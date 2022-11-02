@@ -1,19 +1,16 @@
-import logo from "../../imgs/logo.svg";
 const Header = () => {
     return (
         <div>
             <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light">
-                <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none ms-4">
-                    <img src={logo} alt="Logotipo de MI Dulce Online" height="40" />
+                <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none ms-5">
+                    <span className="fs-4"><i className="bi bi-shop"></i> MiDulceOnline</span>
                 </a>
 
                 <ul className="nav nav-pills">
-                    <li className="nav-item"><a href="/" className="nav-link active" aria-current="page">Inicio</a></li>
-                    <li className="nav-item"><a href="/categorias" className="nav-link">Categorías</a></li>
-                    <li className="nav-item"><a href="/productos" className="nav-link">Productos</a></li>
-                    <li className="nav-item"><a href="/carrito" className="nav-link">Carrito de compras</a></li>
-                    <li className="nav-item"><button type="button" class="btn btn-outline-primary me-2">Inicia sesión</button></li>
-                    <li className="nav-item"><button type="button" class="btn btn-outline-primary me-2">Regístrate</button></li>
+                    <li className="nav-item"><a href="/" className="nav-link active" aria-current="page"><i className="bi bi-house-heart"></i> Inicio</a></li>
+                    <li className="nav-item"><a href="/categorias" className="nav-link"><i className="bi bi-bookmark-star"></i> Categorías</a></li>
+                    <li className="nav-item"><a href="/productos" className="nav-link"><i className="bi bi-bag-heart"></i> Productos</a></li>
+                    <li className="nav-item"><a href="/carrito" className="nav-link"><i className="bi bi-cart2"></i> Carrito</a></li>
                 </ul>
             </header>
         </div>
