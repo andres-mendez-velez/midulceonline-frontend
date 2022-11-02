@@ -1,6 +1,6 @@
-import Header from "./general/Header";
-import Banner from "./general/Banner";
-import TablaCategorias from "./categorias/TablaCategorias";
+import Header from "./componentes/general/Header";
+import Banner from "./componentes/general/Banner";
+import TablaCategorias from "./componentes/categorias/TablaCategorias";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
