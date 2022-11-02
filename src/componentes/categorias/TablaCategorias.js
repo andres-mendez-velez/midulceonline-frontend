@@ -7,6 +7,7 @@ const TablaCategorias = () => {
     let estado;
 
     const cargarData = async () => {
+        estado = Estados.CARGANDO;
         listaCategorias = await categoriaServicios.obtenerCategorias();
         console.log(listaCategorias);
         if (listaCategorias.length === 0) {
@@ -45,7 +46,7 @@ const TablaCategorias = () => {
                                     </td>
                                 </tr>
                             ) :
-                            (estado === Estados.VACIO) ?
+                            estado === Estados.VACIO ?
                                 (
                                     <tr>
                                         <td align="center" colSpan="5">
@@ -59,9 +60,6 @@ const TablaCategorias = () => {
                                             <td>{categoria.nombre}</td>
                                             <td>{categoria.disponible ? "Sí" : "No"}</td>
                                             <td>{categoria.descripcion}</td>
-                                            <td>
-                                                <img src={categoria.imagen} height="30" width="60" alt="Imágen de la categoría" />
-                                            </td>
                                             <td>
                                                 <div className="btn-group" role="group" aria-label="Acciones">
                                                     <button type="button" className="btn btn-secondary btn-sm">Editar</button>

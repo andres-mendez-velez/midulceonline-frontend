@@ -1,6 +1,18 @@
 const Variables = () => {
-    return 
-}
+
+    let contador = 0;
+    const incrementar = () => {
+        contador += 1;
+        console.log(contador);
+    }
+
+    return (
+        <div>Hola: {contador}
+            <button onClick={incrementar}>Incrementar</button>
+        </div>
+
+    );
+};
 
 
 export default Variables;

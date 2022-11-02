@@ -4,6 +4,8 @@ import Banner from "./componentes/general/Banner";
 import TablaCategorias from "./componentes/categorias/TablaCategorias";
 import FormCategorias from "./componentes/categorias/FormCategorias";
 
+//import Variables from "./componentes/categorias/Variables";
+
 function App() {
   return (
     <div>

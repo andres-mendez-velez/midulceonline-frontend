@@ -1,18 +1,15 @@
-import reposteria from '../imgs/reposteria.jpg';
-import confiteria from '../imgs/confiteria.jpg';
-
 const categorias = [
     {
         nombre: "Repostería",
         disponible: true,
         descripcion: "Descripción...",
-        imagen: reposteria
+        imagen: "reposteria.jpg"
     },
     {
         nombre: "Confiteríá",
         disponible: false,
         descripcion: "Descripción...",
-        imagen: confiteria
+        imagen: "confiteria.jpg"
     }
 ];
 
