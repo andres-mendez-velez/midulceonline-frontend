@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const categorias = [
     {
         nombre: "Repostería",
@@ -16,11 +18,7 @@ const categorias = [
 const categoriaServicios = {};
 
 categoriaServicios.obtenerCategorias = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(categorias);
-        }, 2000)
-    });
+    return axios.get("http://localhost:8000/api/categorias");
 };
 
 export default categoriaServicios;

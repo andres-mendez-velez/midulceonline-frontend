@@ -1,23 +1,29 @@
 import categoriaServicios from "../../servicios/categoriaServicios";
 import Estados from "../../enums/Estados";
+import { useState, useEffect } from "react";
 
 const TablaCategorias = () => {
 
-    let listaCategorias; // Const no permite declarar y aparte, inicializar
-    let estado;
+    const [listaCategorias, setListaCategorias] = useState([]);
+    const [estado, setEstado] = useState(Estados.CARGANDO);
 
-    const cargarData = async () => {
-        estado = Estados.CARGANDO;
-        listaCategorias = await categoriaServicios.obtenerCategorias();
-        console.log(listaCategorias);
-        if (listaCategorias.length === 0) {
-            estado = Estados.VACIO;
-        }
-        else {
-            estado = Estados.OK;
-        }
-    };
-    cargarData();
+    useEffect(() => {
+        const cargarData = async () => {
+            try {
+                const respuesta = await categoriaServicios.obtenerCategorias();
+                if (respuesta.data.length > 0) {
+                    setListaCategorias(respuesta.data);
+                    setEstado(Estados.OK);
+                }
+                else {
+                    setEstado(Estados.VACIO);
+                }
+            } catch (error) {
+                setEstado(Estados.ERROR);
+            }
+        };
+        cargarData();
+    }, []);
 
     return (
         <div className="ms-5 me-5">
@@ -36,39 +42,48 @@ const TablaCategorias = () => {
                 </thead>
                 <tbody>
                     {
-                        (estado === Estados.CARGANDO) ?
+                        estado === Estados.CARGANDO ?
                             (
                                 <tr>
                                     <td align="center" colSpan="5">
-                                        <div className="spinner-grow text-primary" role="status">
-                                            <span className="visually-hidden">Loading...</span>
+                                        <div className="spinner-grow text-primary me-2" role="status">
+                                            <span className="visually-hidden">Cargando...</span>
                                         </div>
                                     </td>
                                 </tr>
                             ) :
-                            estado === Estados.VACIO ?
+                            estado === Estados.ERROR ?
                                 (
                                     <tr>
                                         <td align="center" colSpan="5">
-                                            No hay datos
+                                            Error cargando datos. Por favor intente más tarde.
                                         </td>
                                     </tr>
                                 ) :
-                                (
-                                    listaCategorias.map((categoria) => (
+                                estado === Estados.VACIO ?
+                                    (
                                         <tr>
-                                            <td>{categoria.nombre}</td>
-                                            <td>{categoria.disponible ? "Sí" : "No"}</td>
-                                            <td>{categoria.descripcion}</td>
-                                            <td>
-                                                <div className="btn-group" role="group" aria-label="Acciones">
-                                                    <button type="button" className="btn btn-secondary btn-sm">Editar</button>
-                                                    <button type="button" className="btn btn-danger btn-sm">Eliminar</button>
-                                                </div>
+                                            <td align="center" colSpan="5">
+                                                No se encontraron datos.
                                             </td>
                                         </tr>
-                                    ))
-                                )
+                                    ) :
+                                    (
+                                        listaCategorias.map((categoria) => (
+                                            <tr>
+                                                <td>{categoria.nombre}</td>
+                                                <td>{categoria.disponible ? "Sí" : "No"}</td>
+                                                <td>{categoria.descripcion}</td>
+                                                <td>{categoria.imagen}</td>
+                                                <td>
+                                                    <div className="btn-group" role="group" aria-label="Acciones">
+                                                        <button type="button" className="btn btn-secondary btn-sm">Editar</button>
+                                                        <button type="button" className="btn btn-danger btn-sm">Eliminar</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        ))
+                                    )
                     }
                 </tbody>
             </table>
