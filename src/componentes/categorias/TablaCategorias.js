@@ -51,12 +51,12 @@ const TablaCategorias = () => {
             <h4 className="mb-4">Lista de categorías
                 <a href="/categorias/form" className="btn btn-primary btn-sm ms-3" title="Agregar nueva categoría">+</a>
             </h4>
-            <div class="input-group mb-3">
-                <button onClick={buscarCategoria} class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
-                <input onChange={cambiarCriterio} value={criterio} type="text" class="form-control" placeholder="Ingrese aquí su búsqueda" aria-label="Busqueda con filtro" 
+            <div className="input-group mb-3 w-25">
+                <input onChange={cambiarCriterio} value={criterio} type="text" className="form-control" placeholder="Ingrese aquí su búsqueda" aria-label="Busqueda con filtro" 
                 aria-describedby="buscar"/>
+                <button onClick={buscarCategoria} className="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
             </div>
-            <table className="table table-sm">
+            <table className="table table-sm table-bordered align-middle">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -96,14 +96,14 @@ const TablaCategorias = () => {
                                     ) :
                                     (
                                         listaCategorias.map((categoria) => (
-                                            <tr>
+                                            <tr key={categoria._id}>
                                                 <td>{categoria.nombre}</td>
                                                 <td>{categoria.disponible ? "Sí" : "No"}</td>
                                                 <td>{categoria.descripcion}</td>
                                                 <td>{categoria.imagen}</td>
                                                 <td>
                                                     <div className="btn-group" role="group" aria-label="Acciones">
-                                                        <button type="button" className="btn btn-primary btn-sm">Editar</button>
+                                                        <a href={"/categorias/form/" + categoria._id} type="button" className="btn btn-primary btn-sm">Editar</a>
                                                         <button type="button" className="btn btn-danger btn-sm">Eliminar</button>
                                                     </div>
                                                 </td>
