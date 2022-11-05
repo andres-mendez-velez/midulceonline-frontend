@@ -73,7 +73,7 @@ const TablaCategorias = () => {
       </div>
       <table className="table table-sm table-bordered align-middle">
         <thead>
-          <tr className="table-secondary">
+          <tr className="table-dark">
             <th>Nombre</th>
             <th>Disponible</th>
             <th>Descripción</th>
