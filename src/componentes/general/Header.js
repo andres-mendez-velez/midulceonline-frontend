@@ -1,9 +1,12 @@
+import '../../styles.css';
+import logo from "../../imgs/candy-shop.png";
+
 const Header = () => {
     return (
         <div>
-            <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light">
-                <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none ms-5">
-                    <span className="fs-4"><i className="bi bi-shop"></i> MiDulceOnline</span>
+            <header className="fuente d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light">
+                <a href="/" className="d-flex align-items-center mb-md-0 me-md-auto text-dark text-decoration-none ms-5">
+                    <span className="fs-4"><img src={logo} height="30" alt='Logo de MiDulceOnline' /><strong>MiDulceOnline</strong></span>
                 </a>
 
                 <ul className="nav nav-pills">

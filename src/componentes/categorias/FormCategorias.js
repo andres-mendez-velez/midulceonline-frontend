@@ -26,13 +26,13 @@ const FormCategorias = () => {
             }
             console.log(datosCategoria);
             if (id == null) {
-                const respuesta = await categoriaServicios.guardarCategoria(datosCategoria);
+                await categoriaServicios.guardarCategoria(datosCategoria);
             } else {
-                const respuesta = await categoriaServicios.modificarCategoria(id, datosCategoria);
+                await categoriaServicios.modificarCategoria(id, datosCategoria);
             }
             goTo("/categorias");
         } catch (error) {
-            console.log("Ocurrió un error. " + error);
+            console.log(error);
         }
     };
 
@@ -78,7 +78,7 @@ const FormCategorias = () => {
     };
 
     return (
-        <form className="container col-6">
+        <form className="container col-6" onSubmit={guardarCategoria}>
             <h4 className="py-3 text-center"><i className={"bi bi-" + icono + " me-2"}></i>{titulo} categoría</h4>
             <div className="input-group mb-3">
                 <span className="input-group-text" id="nombre" name="nombre">Categoría</span>
@@ -96,8 +96,8 @@ const FormCategorias = () => {
                 <label className="form-check-label" htmlFor="disponible">Disponible</label>
             </div>
             <div className="py-4 text-center">
-                <button className="btn btn-primary me-2" onClick={guardarCategoria}>Guardar</button>
-                <a href="/categorias" className="btn btn-secondary">Cancelar</a>
+                <button className="btn btn-primary me-2">Guardar</button>
+                <a href="/categorias" className="btn btn-dark">Cancelar</a>
             </div>
         </form>
     );

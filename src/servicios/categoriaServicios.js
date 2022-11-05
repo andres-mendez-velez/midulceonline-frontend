@@ -37,4 +37,8 @@ categoriaServicios.modificarCategoria = (id, categoria) => {
     return axios.put("http://localhost:8000/api/categorias/" + id, categoria);
 };
 
+categoriaServicios.eliminarCategoria = (id) => {
+    return axios.delete("http://localhost:8000/api/categorias/" + id);
+};
+
 export default categoriaServicios;

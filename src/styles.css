@@ -1,0 +1,25 @@
+.fuente {
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 16px;
+}
+
+.cover1, .cover2, .cover3 {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; /* Para opacar el fondo y resaltar las letras*/
+    color: white;
+}
+
+.cover1 {
+    background-image: url("../src/imgs/banner1.png");
+}
+
+.cover2 {
+    background-image: url("../src/imgs/banner2.jpg");
+}
+
+.cover3 {
+    background-image: url("../src/imgs/banner3.jpg");
+}
