@@ -122,10 +122,22 @@ const TablaProductos = () => {
                         <td>{producto.presentacion}</td>
                         <td>{producto.cantidad}</td>
                         <td>{producto.precio}</td>
-                        <td>{producto.keywords}</td>
+                        <td>
+                          {producto.keywords.map(elemento => {
+                            return <div key={`elemento_${elemento}`}>
+                              {elemento}<br />
+                            </div>
+                          })}
+                        </td>
                         <td>{producto.disponible ? "Sí" : "No"}</td>
                         <td>{producto.categoria}</td>
-                        <td>{producto.imagenes}</td>
+                        <td>
+                          {producto.imagenes.map(elemento2 => {
+                            return <div key={`elemento2_${elemento2}`}>
+                              {elemento2}<br />
+                            </div>
+                          })}
+                        </td>
                         <td className="text-center">
                           <div className="btn-group" role="group" aria-label="Acciones">
                             <a title="Editar" href={"/productos/form/" + producto._id} type="button"
