@@ -13,7 +13,6 @@ const TablaCategorias = () => {
   const cargarData = async () => {
     try {
       const respuesta = await categoriaServicios.obtenerCategorias();
-      console.log(respuesta);
       if (respuesta.data.length > 0) {
         setListaCategorias(respuesta.data);
         setEstado(Estados.OK);

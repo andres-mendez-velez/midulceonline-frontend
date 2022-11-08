@@ -91,7 +91,7 @@ const TablaProductos = () => {
             estado === Estados.CARGANDO ?
               (
                 <tr>
-                  <td align="center" colSpan="5">
+                  <td align="center" colSpan="10">
                     <div className="spinner-grow text-primary me-2" role="status">
                       <span className="visually-hidden">Cargando...</span>
                     </div>

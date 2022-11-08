@@ -5,7 +5,7 @@ const Ingreso = () => {
         <div>
             <main class="form-signin w-25 m-auto text-center ">
                 <form>
-                    <img class="mb-4" src={logo} width="72" height="57" alt='Logo de MiDulceOnline' />
+                    <p><img class="mb-3 mt-5" src={logo} width="72" height="57" alt='Logo de MiDulceOnline' /><h1 className='fuente'>MiDulceOnline</h1></p>
                    
                     <div class="form-floating" >
                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />

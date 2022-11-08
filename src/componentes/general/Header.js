@@ -9,11 +9,11 @@ const Header = () => {
           <span className="fs-4"><img src={logo} height="30" alt='Logo de MiDulceOnline' /><strong>MiDulceOnline</strong></span>
         </a>
 
-        <ul className="nav nav-pills">
-          <li className="nav-item"><a href="/" className="nav-link active" aria-current="page"><i className="bi bi-house-heart"></i> Inicio</a></li>
-          <li className="nav-item"><a href="/categorias" className="nav-link"><i className="bi bi-bookmark-star"></i> Categorías</a></li>
-          <li className="nav-item"><a href="/productos" className="nav-link"><i className="bi bi-bag-heart"></i> Productos</a></li>
-          <li className="nav-item"><a href="/pedidos" className="nav-link"><i className="bi bi-truck"></i> Pedidos</a></li>
+        <ul className="nav nav-pills me-5">
+          <li className="nav-item"><a href="/" className="nav-link active" aria-current="page"><i className="bi bi-house-heart me-2" />Inicio</a></li>
+          <li className="nav-item"><a href="/categorias" className="nav-link"><i className="bi bi-bookmark-star me-2" />Categorías</a></li>
+          <li className="nav-item"><a href="/productos" className="nav-link"><i className="bi bi-bag-heart me-2" />Productos</a></li>
+          <li className="nav-item"><a href="/pedidos" className="nav-link"><i className="bi bi-truck me-2" />Pedidos</a></li>
         </ul>
       </header>
     </div>

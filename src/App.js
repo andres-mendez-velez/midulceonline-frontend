@@ -3,14 +3,14 @@ import TablaCategorias from "./componentes/categorias/TablaCategorias";
 import FormCategorias from "./componentes/categorias/FormCategorias";
 import TablaProductos from "./componentes/productos/TablaProductos";
 import FormProductos from "./componentes/productos/FormProductos";
-import Main from "./componentes/contenedora/Main";
-import FormRegistro from "./componentes/categorias/FormRegistro";
+import Main from "./componentes/usuarios/Main";
+import FormRegistro from "./componentes/usuarios/FormRegistro";
 import Ingreso from "./componentes/general/Ingreso";
-import Pedidos from "./componentes/contenedora/Pedidos";
-import MainUsuario from "./componentes/contenedora/MainUsuario";
-import CatalogoCompra from "./componentes/contenedora/CatalogoCompra";
-import CarritoCompras from "./componentes/contenedora/CarritoCompras";
-import EstadoPaquete from "./componentes/contenedora/EstadoPaquete";
+import Pedidos from "./componentes/usuarios/Pedidos";
+import MainUsuario from "./componentes/usuarios/MainUsuario";
+import CatalogoCompra from "./componentes/usuarios/CatalogoCompra";
+import CarritoCompras from "./componentes/usuarios/CarritoCompras";
+import EstadoPaquete from "./componentes/usuarios/EstadoPaquete";
 import Header from "./componentes/general/Header";
 
 function App() {
