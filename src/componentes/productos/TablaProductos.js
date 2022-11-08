@@ -61,7 +61,7 @@ const TablaProductos = () => {
 
   return (
     <div className="ms-5 me-5 position-relative">
-      <h4 className="mb-4"><i className="bi bi-bookmark-star me-2"></i>Productos
+      <h4 className="mb-4"><i className="bi bi-bag-heart me-2"/>Productos
       </h4>
       <div className="position-absolute top-0 end-0">
         <a href="/productos/form" className="btn btn-primary btn-sm ms-5" title="Agregar nuevo producto"><b>Agregar producto</b></a>
@@ -121,7 +121,7 @@ const TablaProductos = () => {
                         <td>{producto.marca}</td>
                         <td>{producto.presentacion}</td>
                         <td>{producto.cantidad}</td>
-                        <td>{producto.precio}</td>
+                        <td>{"$ " + producto.precio}</td>
                         <td>
                           {producto.keywords.map(elemento => {
                             return <div key={`elemento_${elemento}`}>
