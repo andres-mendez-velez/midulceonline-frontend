@@ -1,4 +1,4 @@
-import HeaderUsuario from "../general/HeaderUsuario";
+import HeaderUsuario from "./HeaderUsuario";
 const MainUsuario =()=>{
     return(
         <div>
