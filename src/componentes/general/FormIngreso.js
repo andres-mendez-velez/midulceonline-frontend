@@ -18,7 +18,7 @@ const Ingreso = () => {
 
                     <div class="d-grid gap-2">
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
-                        <a href="/registroForm/form" className="w-100 btn btn-lg btn-primary" type="button">Registrarse</a>
+                        <a href="/usuarios/form" className="w-100 btn btn-lg btn-primary" type="button">Registrarse</a>
                         <a href="/invitado" className="w-100 btn btn-lg btn-primary" type="button">Invitado</a>
                     </div>
 
