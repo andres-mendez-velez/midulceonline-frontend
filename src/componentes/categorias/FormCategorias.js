@@ -24,7 +24,7 @@ const FormCategorias = () => {
                 descripcion: descripcion,
                 imagen: imagen
             }
-            console.log(datosCategoria);
+            /*console.log(datosCategoria);*/
             if (id == null) {
                 await categoriaServicios.guardarCategoria(datosCategoria);
             } else {
@@ -53,11 +53,11 @@ const FormCategorias = () => {
     useEffect(() => {
         if (id != null) {
             setTitulo("Editar");
-            setIcono("pencil-square")
+            setIcono("pencil-square");
             cargarCategoria();
         } else {
             setTitulo("Nueva");
-            setIcono("bookmark-plus")
+            setIcono("bookmark-plus");
         }
     }, []);
 

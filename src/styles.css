@@ -13,13 +13,13 @@
 }
 
 .cover1 {
-    background-image: url("../src/imgs/banner1.png");
+    background-image: url("../src/assets/banner1.png");
 }
 
 .cover2 {
-    background-image: url("../src/imgs/banner2.jpg");
+    background-image: url("../src/assets/banner2.jpg");
 }
 
 .cover3 {
-    background-image: url("../src/imgs/banner3.jpg");
+    background-image: url("../src/assets/banner3.jpg");
 }

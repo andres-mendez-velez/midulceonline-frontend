@@ -24,7 +24,7 @@ const Banner = () => {
                         <div className="carousel-caption">
                             <h1>Contamos con el mejor equipo de trabajo.</h1>
                             <p>Desde MiDulceOnline nos aseguramos de que nuestro equipo sienta pasión por este arte.</p>
-                            <p><a className="btn btn-lg btn-primary" href="/registroFormBanner/form">Regístrate, es gratis!</a></p>
+                            <p><a className="btn btn-lg btn-primary" href="/usuarios/form">Regístrate, es gratis!</a></p>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const Banner = () => {
                         <div className="carousel-caption">
                             <h1>Siempre ofreciéndote los mejores sabores.</h1>
                             <p>Nuestros científicos del paladar se encargan de crear sabores que dejarán una huella en tí.</p>
-                            <p><a className="btn btn-lg btn-primary" href="/ingresoFormBanner/Form">Inicia sesión</a></p>
+                            <p><a className="btn btn-lg btn-primary" href="/login/form">Inicia sesión</a></p>
                         </div>
                     </div>
                 </div>
