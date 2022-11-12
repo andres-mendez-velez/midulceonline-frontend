@@ -167,7 +167,7 @@ const FormProductos = () => {
                     placeholder="Ingrese aquí las keywords (máximo 100 caracteres)" name="keywords" ></input>
             </div>
             <label htmlFor="categoria1" className="form-label" >Categoria:</label>
-            <select className="form-select" id="categoria1" aria-label="Seleccion de categorias" onChange={cambiarCategoria} required >
+            <select className="form-select" id="categoria1" aria-label="Seleccion de categorias" onClick={cambiarCategoria} required >
                 {
                     estado === Estados.OK ?
                         listaCategorias.map(categoria => (

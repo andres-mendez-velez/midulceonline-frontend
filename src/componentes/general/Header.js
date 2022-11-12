@@ -44,16 +44,6 @@ const Header = () => {
           usuario.estadologin === EstadosLogin.NO_INGRESO ?
             (
               <ul className="nav nav-pills me-5">
-                <li className="nav-item">
-                  <a href="/productos/cliente" className="nav-link" aria-current="page">
-                    <i className="bi bi-house-heart me-2"></i>Catálogo
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="/categorias/cliente" className="nav-link">
-                    <i className="bi bi-bookmark-star me-2"></i>Categorías
-                  </a>
-                </li>
                 <li className="nav-item me-2">
                   <a href="/login/form" className="nav-link active">
                     <i className="bi bi-bookmark-star me-2"></i>Ingreso
@@ -68,7 +58,7 @@ const Header = () => {
             ) :
             usuario.estadologin === EstadosLogin.ADMIN ?
               (
-                <ul style={{ "list-style": "none" }}>
+                <ul style={{ "listStyle": "none" }}>
                   <li>
                     {usuario.nombres}
                   </li>

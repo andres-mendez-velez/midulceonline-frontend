@@ -10,6 +10,8 @@ import Banner from "./componentes/general/Banner";
 import { useState } from "react";
 import { ContextoUsuario } from "./componentes/usuarios/ContextoUsuario";
 import Gestor from "./componentes/usuarios/Gestor";
+import MostradorProductos from "./componentes/productos/MostradorProductos";
+import MostradorCategorias from "./componentes/categorias/MostradorCategorias";
 
 function App() {
   const [usuario, setUsuario] = useState({ nombres: "", estadologin: 0 });
@@ -20,11 +22,14 @@ function App() {
         <ContextoUsuario.Provider value={{ usuario, setUsuario }}>
           <Header />
           <Routes>
-            <Route path="/" element={<Banner />} exact/>
+            <Route path="/" element={<Banner />} exact />
             <Route path="/gestor" element={<Gestor />} exact />
 
-            <Route path="/login/form" element={<FormIngreso />} />
+            <Route path="/login/form" element={<FormIngreso />} exact />
             <Route path="/usuarios/form" element={<FormRegistro />} exact />
+
+            <Route path="/productos/cliente" element={<MostradorProductos />} exact />
+            <Route path="/categorias/cliente" element={<MostradorCategorias />} exact />
 
             <Route path="/categorias" element={<TablaCategorias />} exact />
             <Route path="/categorias/form" element={<FormCategorias />} exact />

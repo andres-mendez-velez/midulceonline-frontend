@@ -1,5 +1,4 @@
 import '../../styles.css';
-import logo from "../../assets/candy-shop.png";
 import { useContext, useState } from 'react';
 import LoginServicios from "../../servicios/loginServicios";
 import { ContextoUsuario } from '../usuarios/ContextoUsuario';
@@ -62,32 +61,43 @@ const FormIngreso = () => {
   }
 
   return (
-    <div className='text-center'>
-      <form onSubmit={validar} className='w-100 m-auto ' style={{ maxWidth: "300px", padding: "15px" }}>
-        <img className="mb-4" src={logo} width="72" height="57" alt='Logo de MiDulceOnline' />
-        <h1 className='mb-3 fw-normal fuente'>MiDulceOnline</h1>
-
-        <div className="form-floating" >
-          <input type="email" className="form-control" value={correo} onChange={cambiarCorreo} id="correo" placeholder="nombre@ejemplo.com" required />
-          <label htmlFor="correo">Correo electrónico</label>
+    <div>
+      <h3 className='text-center mt-5'>Iniciar sesión</h3>
+      <div className='position-relative mt-4'>
+        <div class="card border-primary shadow position-absolute top-0 start-50 translate-middle-x" style={{ width: "50%" }}>
+          <div class="card-body">
+            <form onSubmit={validar}>
+              <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" value={correo} onChange={cambiarCorreo} placeholder="nombre@ejemplo.com" required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Constraseña</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" value={password} onChange={cambiarPassword} required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                  <div className="form-check mb-3">
+                    <label className="form-check-label">
+                      <input className="form-check-input" type="checkbox" checked={recordar} onChange={cambiarRecordar} />Recordar contraseña
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p>
+                  <button className="btn btn-primary me-2" onClick={validar} type="submit">Ingresar</button>
+                  <a className="btn btn-primary" type="submit" href='/'>Cancelar</a>
+                </p>
+                <p>{mensaje}</p>
+              </div>
+            </form>
+          </div>
         </div>
-
-        <div className="form-floating ">
-          <input type="password" className="form-control" value={password} onChange={cambiarPassword} id="password" placeholder="Contraseña" required />
-          <label htmlFor="password">Contraseña</label>
-        </div>
-
-        <div className="form-check mb-3">
-          <label className="form-check-label">
-            <input className="form-check-input" type="checkbox" checked={recordar} onChange={cambiarRecordar} />Recordar contraseña
-          </label>
-        </div>
-
-      </form>
-      <div>
-        <button className="btn btn-lg btn-primary me-2" onClick={validar} type="submit">Confirmar</button>
-        <a className="btn btn-lg btn-primary" type="submit" href='/'>Cancelar</a>
-        {mensaje}
       </div>
     </div>
   )
