@@ -52,7 +52,7 @@ function MostradorProductos() {
         <div className="input-group mb-3 mt-3">
           <input type="text" className="form-control" id="buscar" value={criterio} onChange={cambiarCriterio}
             placeholder="Buscar productos" aria-label="Buscar" aria-describedby="buscar" />
-          <button className="btn btn-outline-primary" type="button" onClick={buscarProductos}>
+          <button className="btn btn-primary" type="button" onClick={buscarProductos}>
             <i className="bi bi-search ms-4 me-4" />
           </button>
         </div>

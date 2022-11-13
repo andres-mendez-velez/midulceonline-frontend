@@ -61,8 +61,7 @@ const TablaProductos = () => {
 
   return (
     <div className="ms-5 me-5 position-relative">
-      <h4 className="mb-4"><i className="bi bi-bag-heart me-2"/>Productos
-      </h4>
+      <h4 className="mb-4"><i className="bi bi-bag-heart me-2"/>Productos</h4>
       <div className="position-absolute top-0 end-0">
         <a href="/productos/form" className="btn btn-primary btn-sm ms-5" title="Agregar nuevo producto"><b>Agregar producto</b></a>
       </div>

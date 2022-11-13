@@ -62,25 +62,25 @@ const FormIngreso = () => {
 
   return (
     <div>
-      <h3 className='text-center mt-5'>Iniciar sesión</h3>
+      <h3 className='text-center mt-5'><i className="bi bi-person-vcard me-2"></i>Iniciar sesión</h3>
       <div className='position-relative mt-4'>
-        <div class="card border-primary shadow position-absolute top-0 start-50 translate-middle-x" style={{ width: "50%" }}>
-          <div class="card-body">
+        <div className="card border-primary shadow position-absolute top-0 start-50 translate-middle-x" style={{ width: "50%" }}>
+          <div className="card-body">
             <form onSubmit={validar}>
-              <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputEmail3" value={correo} onChange={cambiarCorreo} placeholder="nombre@ejemplo.com" required />
+              <div className="row mb-3">
+                <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
+                <div className="col-sm-10">
+                  <input type="email" className="form-control" id="inputEmail3" value={correo} onChange={cambiarCorreo} placeholder="nombre@ejemplo.com" required />
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Constraseña</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword3" value={password} onChange={cambiarPassword} required />
+              <div className="row mb-3">
+                <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Constraseña</label>
+                <div className="col-sm-10">
+                  <input type="password" className="form-control" id="inputPassword3" value={password} onChange={cambiarPassword} required />
                 </div>
               </div>
-              <div class="row mb-3">
-                <div class="col-sm-10 offset-sm-2">
+              <div className="row mb-3">
+                <div className="col-sm-10 offset-sm-2">
                   <div className="form-check mb-3">
                     <label className="form-check-label">
                       <input className="form-check-input" type="checkbox" checked={recordar} onChange={cambiarRecordar} />Recordar contraseña
