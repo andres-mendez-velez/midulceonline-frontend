@@ -3,7 +3,7 @@
     font-size: 16px;
 }
 
-.cover1, .cover2, .cover3 .backlogin{
+.cover1, .cover2, .cover3 {
     height: 400px;
     background-size: cover;
     background-position: center;
@@ -24,6 +24,12 @@
     background-image: url("../src/assets/banner3.jpg");
 }
 
-.backlogin {
-    background-image: url("../src/assets/backlogin.jpg");
+.backGestor, card {
+    background-size: auto;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; /* Para opacar el fondo y resaltar las letras*/
+    color: white;
+    background-image: url("../src/assets/backGestion.jpg");
+    height: 540px;
 }
