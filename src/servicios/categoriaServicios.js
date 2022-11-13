@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const categoriaServicios = {};
-const URL = "http://localhost:8000/api/categorias";
+const URL = "https://mi-dulce-online-beerus-api.herokuapp.com/api/categorias";
 
 categoriaServicios.obtenerCategorias = () => {
     return axios.get(URL);

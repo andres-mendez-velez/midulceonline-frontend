@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const productoServicios = {};
-const URL = "http://localhost:8000/api/productos";
+const URL = "https://mi-dulce-online-beerus-api.herokuapp.com/api/productos";
 
 productoServicios.obtenerProductos = () => {
     return axios.get(URL);
