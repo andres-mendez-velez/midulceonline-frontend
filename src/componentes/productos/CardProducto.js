@@ -6,7 +6,7 @@ function CardProducto({ producto }) {
       <div className="row g-0">
         <div className="col-md-4">
 
-          <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+          <div id={producto.nombre} className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
 
               {
@@ -14,19 +14,19 @@ function CardProducto({ producto }) {
                   <div key={producto._id} className="carousel-item active">
                     <img src={publicImgsURL + imagen} className="img-fluid rounded-start d-block"
                       alt={"Imagen del producto " + producto.nombre} width="75%" />
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Next</span>
-                    </button>
                   </div>
                 ))
               }
 
             </div>
+            <button className="carousel-control-prev" type="button" data-bs-target={"#" + producto.nombre} data-bs-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target={"#" + producto.nombre} data-bs-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
 
         </div>

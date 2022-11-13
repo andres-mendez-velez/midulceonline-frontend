@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import usuarioServicios from "../../servicios/usuarioServicios";
+import Banner from "../general/Banner";
 
 const FormRegistro = () => {
 
@@ -67,8 +68,8 @@ const FormRegistro = () => {
       setIcono("pencil-square")
       cargarUsuario();
     } else {
-      setTitulo("");
-      setIcono("bookmark-plus");
+      setTitulo("Crear");
+      setIcono("person-fill-add");
     }
   }, []);
 
@@ -110,33 +111,33 @@ const FormRegistro = () => {
         <h1 className="h3 mb-3 fw-normal text-center">
           <i className={"bi bi-" + icono + " me-2"}></i>{titulo} cuenta
         </h1>
-        <div class="form-group d-grid gap-2">
-          <label for="nombres">Nombres</label>
-          <input type="text" class="form-control" id="nombres" value={nombres}
+        <div className="form-group d-grid gap-2">
+          <label htmlFor="nombres">Nombres</label>
+          <input type="text" className="form-control" id="nombres" value={nombres}
             placeholder="Ingrese aquí sus nombres" onChange={cambiarNombres} />
 
-          <label for="apellidos">Apellidos</label>
-          <input type="text" class="form-control" id="apellidos" value={apellidos}
+          <label htmlFor="apellidos">Apellidos</label>
+          <input type="text" className="form-control" id="apellidos" value={apellidos}
             placeholder="Ingrese aquí sus apellidos" onChange={cambiarApellidos} />
 
-          <label for="documento">Documento de Identificación:</label>
-          <input type="number" class="form-control" id="documento" value={documento}
+          <label htmlFor="documento">Documento de Identificación:</label>
+          <input type="number" className="form-control" id="documento" value={documento}
             placeholder="Ingrese aquí su documento" onChange={cambiarDocumento} />
 
-          <label for="direccion">Dirección</label>
-          <input type="text" class="form-control" id="direccion" value={direccion}
+          <label htmlFor="direccion">Dirección</label>
+          <input type="text" className="form-control" id="direccion" value={direccion}
             placeholder="Ingrese aquí su domicilio" onChange={cambiarDireccion} />
 
-          <label for="telefono">Teléfono</label>
-          <input type="number" class="form-control" id="telefono" value={telefono}
+          <label htmlFor="telefono">Teléfono</label>
+          <input type="number" className="form-control" id="telefono" value={telefono}
             placeholder="Ingrese aquí su telefono" onChange={cambiarTelefono} />
 
-          <label for="correo">Correo</label>
-          <input type="email" class="form-control" id="correo" value={correo}
+          <label htmlFor="correo">Correo</label>
+          <input type="email" className="form-control" id="correo" value={correo}
             placeholder="Ingrese aquí email" onChange={cambiarCorreo} />
 
-          <label for="password">Contraseña</label>
-          <input type="password" class="form-control" id="password" value={password}
+          <label htmlFor="password">Contraseña</label>
+          <input type="password" className="form-control" id="password" value={password}
             placeholder="Ingrese aquí su contraseña" onChange={cambiarPassword} />
 
           <div className="form-check">

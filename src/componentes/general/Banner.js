@@ -54,36 +54,36 @@ const Banner = () => {
       </div>
 
       <section className='ms-5 me-5 mt-4'>
-        <div class="container mt-5 mb-5">
-          <div class="row justify-content-center">
+        <div className="container mt-5 mb-5">
+          <div className="row justify-content-center">
 
-            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mt-2 me-2" style={{ width: "18rem" }}>
-              <img src={finanzas} class="card-img-top" alt="Imagen de arbol creciendo entre monedas" />
-              <div class="card-body">
-                <h5 class="card-title">Comercio justo</h5>
-                <p class="card-text">
+            <div className="card mt-2 me-2" style={{ width: "18rem" }}>
+              <img src={finanzas} className="card-img-top" alt="Imagen de arbol creciendo entre monedas" />
+              <div className="card-body">
+                <h5 className="card-title">Comercio justo</h5>
+                <p className="card-text">
                   No hay nada más importante para nosotros que ser proveedores de confianza para todos nuestros clientes,
                   por lo que tratamos tú economía con la mayor seriedad posible.
                 </p>
               </div>
             </div>
 
-            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mt-2 me-2" style={{ width: "18rem" }}>
-              <img src={reposteria} class="card-img-top" alt="Imagen de arbol creciendo entre monedas" />
-              <div class="card-body">
-                <h5 class="card-title">Experiencia</h5>
-                <p class="card-text">
+            <div className="card mt-2 me-2" style={{ width: "18rem" }}>
+              <img src={reposteria} className="card-img-top" alt="Imagen de arbol creciendo entre monedas" />
+              <div className="card-body">
+                <h5 className="card-title">Experiencia</h5>
+                <p className="card-text">
                   Nuestro equipo está conformado por personas calificadas que dedican su vida a ofrecerte los sabores que
                   buscas.
                 </p>
               </div>
             </div>
 
-            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 mt-2 me-2" style={{ width: "18rem" }}>
-              <img src={variedad} class="card-img-top" alt="Imagen de arbol creciendo entre monedas" />
-              <div class="card-body">
-                <h5 class="card-title">Variedad para todos los gustos</h5>
-                <p class="card-text">
+            <div className="card mt-2 me-2" style={{ width: "18rem" }}>
+              <img src={variedad} className="card-img-top" alt="Imagen de arbol creciendo entre monedas" />
+              <div className="card-body">
+                <h5 className="card-title">Variedad para todos los gustos</h5>
+                <p className="card-text">
                   Ofrecemos el 90% de productos de repostería, heladería y panadería de la región.
                 </p>
               </div>

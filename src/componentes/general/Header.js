@@ -46,12 +46,12 @@ const Header = () => {
               <ul className="nav nav-pills me-5">
                 <li className="nav-item me-2">
                   <a href="/login/form" className="nav-link">
-                    <i className="bi bi-bookmark-star me-2"></i>Ingreso
+                  <i className="bi bi-person-vcard me-2"></i>Ingreso
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="/usuarios/form" className="nav-link">
-                    <i className="bi bi-bookmark-star me-2"></i>Registro
+                    <i className="bi bi-person-fill-add me-2"></i>Registro
                   </a>
                 </li>
               </ul>
@@ -62,11 +62,6 @@ const Header = () => {
                   <li className="nav-item">
                     <a href="/usuarios/form" className="nav-link active" aria-current="page">
                       <i class="bi bi-person-square me-2"></i>{usuario.nombres}
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="/" className="nav-link" aria-current="page">
-                      <i className="bi bi-house-heart me-2" />Inicio
                     </a>
                   </li>
                   <li className="nav-item">
