@@ -85,7 +85,7 @@ const Header = () => {
                       </li>
                       <li className="nav-item">
                         <button type='button' onClick={cerrarSesion} className="nav-link">
-                          Salir
+                          <i class="bi bi-x-circle me-2"></i>Salir
                         </button>
                       </li>
                     </ul>
@@ -106,12 +106,12 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <a href="/carrito_compras" className="nav-link">
-                      <i className="bi bi-bookmark-star me-2"></i>Carrito de compras
+                      <i className="bi bi-cart me-2"></i>Carrito
                     </a>
                   </li>
                   <li className="nav-item">
                     <button type='button' onClick={cerrarSesion} className="nav-link">
-                      Salir
+                      <i class="bi bi-x-circle me-2"></i>Salir
                     </button>
                   </li>
                 </ul>

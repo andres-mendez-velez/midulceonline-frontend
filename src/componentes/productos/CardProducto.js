@@ -6,27 +6,27 @@ function CardProducto({ producto }) {
       <div className="row g-0">
         <div className="col-md-4">
 
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+          <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+
               {
-                producto.imagenes.map(element => {
-                  return (
-                    <div key={`element_${element}`} class="carousel-item active">
-                      <img src={publicImgsURL + element} className="img-fluid rounded-start d-block"
-                        alt={"Imagen de producto" + producto.nombre} width="75%"/>
-                    </div>
-                  )
-                })
+                producto.imagenes.map((imagen) => (
+                  <div key={producto._id} className="carousel-item active">
+                    <img src={publicImgsURL + imagen} className="img-fluid rounded-start d-block"
+                      alt={"Imagen del producto " + producto.nombre} width="75%" />
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                ))
               }
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
 
         </div>
