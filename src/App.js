@@ -3,46 +3,43 @@ import TablaCategorias from "./componentes/categorias/TablaCategorias";
 import FormCategorias from "./componentes/categorias/FormCategorias";
 import TablaProductos from "./componentes/productos/TablaProductos";
 import FormProductos from "./componentes/productos/FormProductos";
-import Main from "./componentes/contenedora/Main";
-import FormRegistro from "./componentes/categorias/FormRegistro";
-import Ingreso from "./componentes/general/Ingreso";
-import Pedidos from "./componentes/contenedora/Pedidos";
-import MainUsuario from "./componentes/contenedora/MainUsuario";
-import CatalogoCompra from "./componentes/contenedora/CatalogoCompra";
-import CarritoCompras from "./componentes/contenedora/CarritoCompras";
-import EstadoPaquete from "./componentes/contenedora/EstadoPaquete";
+import FormRegistro from "./componentes/usuarios/FormRegistro";
+import FormIngreso from "./componentes/general/FormIngreso";
 import Header from "./componentes/general/Header";
+import Banner from "./componentes/general/Banner";
+import { useState } from "react";
+import { ContextoUsuario } from "./componentes/usuarios/ContextoUsuario";
+import Gestor from "./componentes/usuarios/Gestor";
+import MostradorProductos from "./componentes/productos/MostradorProductos";
+import MostradorCategorias from "./componentes/categorias/MostradorCategorias";
 
 function App() {
+  const [usuario, setUsuario] = useState({ nombres: "", estadologin: 0 });
+
   return (
     <div>
-      <Header />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} exact />
+        <ContextoUsuario.Provider value={{ usuario, setUsuario }}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Banner />} exact />
+            <Route path="/gestor" element={<Gestor />} exact />
 
-          <Route path="/ingresoFormBanner/Form" element={<Ingreso />} exact />
-          <Route path="/registroFormBanner/form" element={<FormRegistro />} exact />
-          <Route path="/registroForm/form" element={<FormRegistro />} exact />
+            <Route path="/login/form" element={<FormIngreso />} exact />
+            <Route path="/usuarios/form" element={<FormRegistro />} exact />
 
-          <Route path="/categorias" element={<TablaCategorias />} exact />
-          <Route path="/categorias/form" element={<FormCategorias />} exact />
-          <Route path="/categorias/form/:id" element={<FormCategorias />} exact />
+            <Route path="/productos/cliente" element={<MostradorProductos />} exact />
+            <Route path="/categorias/cliente" element={<MostradorCategorias />} exact />
 
-          <Route path="/productos" element={<TablaProductos />} exact />
-          <Route path="/productos/form" element={<FormProductos />} exact />
-          <Route path="/productos/form/:id" element={<FormProductos />} exact />
+            <Route path="/categorias" element={<TablaCategorias />} exact />
+            <Route path="/categorias/form" element={<FormCategorias />} exact />
+            <Route path="/categorias/form/:id" element={<FormCategorias />} exact />
 
-          <Route path="/pedidos" element={<Pedidos />} exact />
-
-          <Route path="/invitado" element={<MainUsuario />} exact />
-
-          <Route path="/catalogo" element={<CatalogoCompra />} exact />
-
-          <Route path="/carrito_compras" element={<CarritoCompras />} exact />
-
-          <Route path="/estado_envio" element={<EstadoPaquete />} exact />
-        </Routes>
+            <Route path="/productos" element={<TablaProductos />} exact />
+            <Route path="/productos/form" element={<FormProductos />} exact />
+            <Route path="/productos/form/:id" element={<FormProductos />} exact />
+          </Routes>
+        </ContextoUsuario.Provider>
       </BrowserRouter>
     </div>
   );

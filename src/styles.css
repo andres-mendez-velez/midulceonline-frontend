@@ -3,7 +3,7 @@
     font-size: 16px;
 }
 
-.cover1, .cover2, .cover3 {
+.cover1, .cover2, .cover3 .backlogin{
     height: 400px;
     background-size: cover;
     background-position: center;
@@ -13,13 +13,17 @@
 }
 
 .cover1 {
-    background-image: url("../src/imgs/banner1.png");
+    background-image: url("../src/assets/banner1.png");
 }
 
 .cover2 {
-    background-image: url("../src/imgs/banner2.jpg");
+    background-image: url("../src/assets/banner2.jpg");
 }
 
 .cover3 {
-    background-image: url("../src/imgs/banner3.jpg");
+    background-image: url("../src/assets/banner3.jpg");
+}
+
+.backlogin {
+    background-image: url("../src/assets/backlogin.jpg");
 }
