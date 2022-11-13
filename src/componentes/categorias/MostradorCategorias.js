@@ -44,7 +44,7 @@ function MostradorCategorias() {
                   <div class="col">
                     <a key={categoria._id} href={"/productos/cliente/?q=" + categoria.nombre} style={{textDecoration: "none"}}>
                       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-                      <img src={publicImgsURL + categoria.imagen} alt={"Imagen de categoria " + categoria.nombre} width="100%" />
+                      <img className="h-100" src={publicImgsURL + categoria.imagen} alt={"Imagen de categoria " + categoria.nombre} />
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                           <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{categoria.nombre}</h3>
                           <ul class="d-flex list-unstyled mt-auto">

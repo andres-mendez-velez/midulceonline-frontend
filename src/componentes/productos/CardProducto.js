@@ -34,10 +34,10 @@ function CardProducto({ producto }) {
           <div className="card-body">
             <h5 className="card-title">{producto.nombre}</h5>
             <p className="card-text">
-              {producto.marca}<br />
-              {producto.presentacion}<br />
-              {producto.cantidad}<br />
-              <b>${producto.precio}</b><br />
+              Marca: {producto.marca}<br />
+              Presentación: {producto.presentacion}<br />
+              Cantidad: {producto.cantidad}<br />
+              Precio: <b>${producto.precio}</b><br />
               Categoría: {producto.categoria}<br />
             </p>
             <p className="card-text"><small className="text-muted">{producto.disponible ? "Disponible" : "No disponible"}</small></p>
